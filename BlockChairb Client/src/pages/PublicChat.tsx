@@ -13,7 +13,7 @@ import { useEffect, useState, useReducer } from "react";
 import Gun from "gun";
 
 const gun = Gun({
-  peers: ["http://localhost:3001/gun"],
+  peers: ["https://calm-eyrie-91768.herokuapp.com/gun"],
 });
 
 const initialState = {
