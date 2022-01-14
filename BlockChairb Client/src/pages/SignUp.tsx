@@ -40,6 +40,7 @@ const SignUpForm = () => {
   const history = useHistory();
 
   const handleSubmit = (e: any) => {
+    e.preventDefault();
     user.create(pseudo, password, ({ err }: any) => {
       if (err) {
         alert(err);
@@ -52,7 +53,7 @@ const SignUpForm = () => {
             let ReducerUser: any = { avatar: "", username: alias };
 
             dispatch(signUp(ReducerUser));
-            history.push("/chat");
+            history.push("/publicChat");
           }
         });
       }

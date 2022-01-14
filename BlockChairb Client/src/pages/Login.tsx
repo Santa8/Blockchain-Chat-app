@@ -25,14 +25,17 @@ const LoginForm = () => {
 
   const history = useHistory();
 
-  async function handleLogin() {
+  async function handleLogin(e: any) {
+    e.preventDefault();
     user.auth(pseudo, password, ({ err }: any) => err && alert(err));
     const alias = await user.get("alias"); // username string
-    let ReducerUser: any;
-    ReducerUser.avatar = "";
-    ReducerUser.username = alias;
+    let ReducerUser = { avatar: "", username: alias };
     dispatch(login(ReducerUser));
-    history.push("/chat");
+    history.push("/publicChat");
+  }
+
+  async function handleSignup() {
+    history.push("/signup");
   }
 
   const onFormLayoutChange = ({ layout }: { layout: LayoutType }) => {
@@ -112,16 +115,24 @@ const LoginForm = () => {
           type="primary"
           htmlType="submit"
           className="login-form-button"
-          onClick={() => {
-            if (pseudo !== "" && password !== "") handleLogin();
+          onClick={(e) => {
+            if (pseudo !== "" && password !== "") handleLogin(e);
           }}
         >
           <p> Login </p>
         </Button>
       </Form.Item>
-      <a href="http://localhost:3000/signup" id="register_now">
-        Register now!
-      </a>
+      <Button
+        id="signup_button"
+        type="primary"
+        htmlType="submit"
+        className="login-form-button"
+        onClick={() => {
+          handleSignup();
+        }}
+      >
+        <p> Register Now </p>
+      </Button>
     </Form>
   );
 };
