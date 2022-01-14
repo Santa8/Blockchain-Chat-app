@@ -1,0 +1,10 @@
+.ProfileMain {
+  width: 180px;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 15px;
+  vertical-align: middle;
+  color: white;
+  display: flex;
+  align-items: center;
+}

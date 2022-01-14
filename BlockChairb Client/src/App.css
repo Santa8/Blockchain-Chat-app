@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #26304d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #61dafb;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.appChat {
+  display: grid;
+  place-items: center;
+  background-color: #dadbd3;
+}
+.appChat_body {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  background-color: #ededed;
+  height: 97vh;
+  width: 97vw;
+  margin-top: -7px;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.2);
+}
