@@ -1,0 +1,148 @@
+.appChat {
+  display: grid;
+  place-items: center;
+  background-color: #588157;
+  height: 100vh;
+}
+.appChat_body {
+  display: flex;
+  background-color: #dad7cd;
+  height: 97vh;
+  width: 97vw;
+  margin-top: -7px;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.2);
+}
+.main {
+  display: flex;
+  flex: 1;
+}
+.chat1 {
+  display: flex;
+  flex: 0.28;
+}
+
+.chat {
+  display: flex;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-room-name {
+  margin: 0px;
+}
+
+.chat-room-last-seen {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chat_header {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.chat_headerInfo {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.chat_headerInfo > h3 {
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.chat_headerInfo > p {
+  color: gray;
+}
+
+.chat_headerRight {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+}
+
+.chat_body {
+  flex: 1;
+  background-color: #e9edc9;
+  background-repeat: repeat;
+  background-position: center;
+  border-radius: 10px;
+  padding: 30px;
+  overflow-y: auto;
+  margin: 0px 5px 5px 3px;
+}
+
+.chat_message {
+  position: relative;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 7px 11px 8px 11px;
+  background-color: #5e5858;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  min-width: 80px;
+  margin-bottom: 34px;
+}
+
+.chat_name {
+  position: absolute;
+  top: -20px;
+  font-weight: 700;
+  font-size: 12px;
+  color: black;
+}
+
+.chat_timestemp {
+  position: absolute;
+  bottom: -16px;
+  margin-left: 5px;
+  font-size: xx-small;
+  color: #5e5858;
+}
+
+.chat_timestemp_receiver {
+  margin-left: auto;
+}
+
+.chat_receiver {
+  margin-left: auto;
+  color: white;
+  background-color: #3a5a40;
+}
+
+.chat_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  border: 0.1px solid rgb(255, 255, 255);
+  padding-left: 10px;
+}
+
+.chat_footer > form {
+  flex: 1;
+  display: flex;
+}
+
+.chat_footer > form > input {
+  flex: 1;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+  margin: 0 10px 0px 10px;
+  color: black;
+}
+
+.chat_footer > form > input:focus {
+  outline: none !important;
+}
+.chat_footer > form > button {
+  color: black;
+  border-color: black;
+  border-radius: 15px;
+}
