@@ -3,7 +3,7 @@ const app = express();
 const Gun = require("gun");
 const path = require("path");
 
-const port = Process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 app.use(Gun.serve);
 app.use(express.static(path.join(__dirname, "build")));
